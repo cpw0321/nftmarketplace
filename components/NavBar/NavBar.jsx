@@ -15,12 +15,6 @@ import { Discover, HelpCenter, Notification, Profile, SideBar } from "./index";
 import Image from "next/image";
 import images from "../../img";
 
-
-const handleClick = () => {
-    // 处理点击事件的逻辑
-    console.log('Button clicked!');
-};
-
 const NavBar = () => {
     const [discover, setDiscover] = useState(false)
     const [help, setHelp] = useState(false)
@@ -127,7 +121,7 @@ const NavBar = () => {
 
                     {/* create button */}
                     <div className={Style.navbar_container_right_button}>
-                        <Button className="Create" btnName="Create" onClick={handleClick()} />
+                        <Button className="Create" btnName="Create" handleClick={() => {}} />
                     </div>
 
                     {/* profile */}

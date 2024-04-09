@@ -18,7 +18,8 @@ bun dev
 ```bash
 npm install gh-pages
 npm run build
-gh-pages -d build
+
+npm run deploy // gh-pages -d .next
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
