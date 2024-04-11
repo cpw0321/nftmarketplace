@@ -15,6 +15,7 @@ import Subscribe from "./Subscribe/Subscribe";
 import Video from "./Video/Video"
 import Filter from "./Filter/Filter"
 import NFTCard from "./NFTCard/NFTCard"
+import LikeProfile from "./LikeProfile/LikeProfile";
 
 export {
     Title,
@@ -33,5 +34,6 @@ export {
     Subscribe,
     Video,
     Filter,
-    NFTCard
+    NFTCard,
+    LikeProfile
 }

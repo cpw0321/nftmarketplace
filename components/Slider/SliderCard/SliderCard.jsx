@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const SliderCard = ({ el, i }) => {
     return (
-        <motion.div className={Style.sliderCard}>
+        <motion.div className={Style.sliderCard} key={i}>
             <div className={Style.sliderCard_box}>
                 <motion.div className={Style.sliderCard_box_img}>
                     <Image
@@ -17,7 +17,6 @@ const SliderCard = ({ el, i }) => {
                         alt="profile braground"
                         width={500}
                         height={300}
-                        objectFit='cover'
                     />
                 </motion.div>
                 <div className={Style.sliderCard_box_title}>

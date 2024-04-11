@@ -77,7 +77,7 @@ const Slider = () => {
                         dragConstraints={{ right: 0, left: -width }}
                     >
                         {FollowingArray.map((el, i) => (
-                            <SliderCard i={i} el={el} key={el.id}/>
+                            <SliderCard i={i} el={el} key={i}/>
                         ))}
                     </motion.div>
                 </motion.div>
