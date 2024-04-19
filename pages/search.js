@@ -1,7 +1,7 @@
 import React from "react";
 
 import Style from "../styles/search.module.css";
-import { SearchBar } from "../SearchPage/searchPageIndex";
+import { SearchBar } from "../searchPage/searchPageIndex";
 import { Filter, Slider, Brand } from "../components/componentsindex";
 
 import { NftCardTwo, Banner } from "../collectionPage/collectionIndex";

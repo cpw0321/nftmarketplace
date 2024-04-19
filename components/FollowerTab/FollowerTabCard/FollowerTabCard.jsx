@@ -20,7 +20,6 @@ const FollowerTabCard = ({ i, el }) => {
                         alt="profile braground"
                         width={500}
                         height={200}
-                        objectFit='cover'
                     />
                 </div>
                 <div className={Style.followerTabCard_box_profile}>

@@ -28,7 +28,6 @@ const Category = () => {
                             alt="profile background"
                             width={200}
                             height={100}
-                            objectFit="cover"
                         />
 
                         <div className={Style.category_box_title}>
