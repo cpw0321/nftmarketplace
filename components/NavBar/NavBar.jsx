@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 
 import Style from './NavBar.module.css';
 
@@ -8,9 +8,11 @@ import { BsSearch } from "react-icons/bs";
 import { MdNotifications } from "react-icons/md";
 import { Button } from "../componentsindex";
 import { CgMenuRight } from "react-icons/cg";
+import { useRouter } from "next/router";
 
 // internal import
 import { Discover, HelpCenter, Notification, Profile, SideBar } from "./index";
+import { NFTMarketplaceContext } from '../../context/NFTMarketplaceContext';
 
 import Image from "next/image";
 import images from "../../img";
@@ -21,6 +23,10 @@ const NavBar = () => {
     const [notification, setNotification] = useState(false)
     const [profile, setProfile] = useState(false)
     const [openSideMenu, setOpenSideMenu] = useState(false)
+
+    const router = useRouter();
+    const { currentAccount, connectWallet } = useContext(NFTMarketplaceContext);
+
     const openMenu = (e) => {
         const btnText = e.target.innerText;
         if (btnText === "Discover") {
@@ -69,7 +75,8 @@ const NavBar = () => {
         } else {
             setOpenSideMenu(false)
         }
-    }
+    };
+
     return (
         <div className={Style.navbar}>
             <div className={Style.navbar_container}>
@@ -121,7 +128,14 @@ const NavBar = () => {
 
                     {/* create button */}
                     <div className={Style.navbar_container_right_button}>
-                        <Button className="Create" btnName="Create" handleClick={() => {}} />
+                        {currentAccount == "" ? (
+                            <Button btnName="Connect" handleClick={() => connectWallet()} />
+                        ) : (
+                            <Button
+                                btnName="Create"
+                                handleClick={() => router.push("/uploadNFT")}
+                            />
+                        )}
                     </div>
 
                     {/* profile */}
