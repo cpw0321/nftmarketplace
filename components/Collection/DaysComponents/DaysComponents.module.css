@@ -60,3 +60,20 @@
     padding: .5rem;
     border-radius: .5rem;
 }
+
+@media screen and (min-device-width: 320px) and (max-device-width: 768px) {
+    .daysComponent_box_profile{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .daysComponent_box_title_info{
+        flex-direction: column;
+        gap: 2rem;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+}
+
+.daysComponent_box_title{
+    padding: 1rem;
+}

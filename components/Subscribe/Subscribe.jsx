@@ -35,6 +35,7 @@ const Subscribe = () => {
                         alt='get update'
                         height={400}
                         width={600}
+                        className={Style.subscribe_box_right_img}
                     />
                 </div>
             </div>

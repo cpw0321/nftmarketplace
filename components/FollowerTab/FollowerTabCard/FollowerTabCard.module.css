@@ -94,3 +94,19 @@
 }
 
 
+@media screen and (min-device-width: 377px) and (max-device-width: 425px) {
+    .FollowerTabCard_box_profile::before{
+        left: 41%;
+    }
+}
+
+@media screen and (min-device-width: 427px) and (max-device-width: 768px) {
+    .FollowerTabCard_box_profile::before{
+        left: 39.5%;
+    }
+}
+@media screen and (min-device-width: 770px) and (max-device-width: 1024px) {
+    .FollowerTabCard_box_profile::before{
+        left: 42%;
+    }
+}

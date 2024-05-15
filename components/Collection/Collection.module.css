@@ -51,3 +51,31 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem
 }
+
+@media screen and (min-device-width: 320px) and (max-device-width: 425px) {
+    .collection_title{
+        width: 90%;
+    }
+
+    .collection_box{
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .collection_collections_btn button{
+        font-size: .7rem;
+    }
+}
+
+@media screen and (min-device-width: 428px) and (max-device-width: 769px) {
+    .collection_title{
+        width: 90%;
+    }
+
+    .collection_box{
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+    }
+}

@@ -24,8 +24,9 @@ const Brand = () => {
           <Image
             src={images.earn}
             alt="brand"
-            width={600}
+            width={500}
             height={400}
+            className={Style.brand_box_right_img}
           />
         </div>
       </div>

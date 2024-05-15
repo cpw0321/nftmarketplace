@@ -151,3 +151,42 @@
   font-size: 1.5rem;
 }
 
+
+@media screen and (min-device-width: 320px) and (max-device-width: 425px) {
+    
+  .nftCard{
+      width: 90%;
+      margin: 0 auto;
+      grid-template-columns: 1fr;
+  }
+
+  .nftCard_box_update_right{
+      padding: .5rem 2rem;
+  }
+
+  .nftCard_box_update_right_info p{
+      font-size: 1rem;
+  }
+}
+
+@media screen and (min-device-width: 427px) and (max-device-width: 768px) {
+  .nftCard{
+      width: 90%;
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nftCard_box_update_right{
+      padding: .5rem 2rem;
+  }
+
+  .nftCard_box_update_right_info p{
+      font-size: 1rem;
+  }
+}
+
+
+@media screen and (min-device-width: 770px) and (max-device-width: 1024px) {
+  .nftCard{
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
