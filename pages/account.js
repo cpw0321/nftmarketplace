@@ -1,20 +1,21 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useState } from 'react';
 import { useDropzone } from "react-dropzone";
 import Style from "../styles/account.module.css";
 import Image from 'next/image';
-import images from '../img'
+import images from '../img';
 
-import From from "../accountPage/Form/Form";
+import Form from "../accountPage/Form/Form";
 
-const account = () => {
-  const [fileUrl, setFileUrl] = useState(null)
+const Account = () => {
+  const [fileUrl, setFileUrl] = useState(null);
   const onDrop = useCallback(async (acceptedFiles) => {
-    setFileUrl(acceptedFiles[0].preview)
+    setFileUrl(acceptedFiles[0].preview);
   }, []);
 
   const { getRootProps, getInputProps } = useDropzone({
     onDrop
   });
+
   return (
     <div className={Style.account}>
       <div className={Style.account_info}>
@@ -39,11 +40,11 @@ const account = () => {
         </div>
 
         <div className={Style.account_box_from}>
-            <From />
-          </div>
+          <Form />
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default account
+export default Account;

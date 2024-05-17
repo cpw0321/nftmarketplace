@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-import Style from "../styles/author.module.css"
+import Style from "../styles/author.module.css";
 import { Banner, NFTCardTwo } from "../collectionPage/collectionIndex";
 import { Brand, Title } from "../components/componentsindex";
 import FollowerTabCard from "../components/FollowerTab/FollowerTabCard/FollowerTabCard";
@@ -11,7 +11,7 @@ import {
     AuthorNFTCardBox,
 } from "../authorPage/componentIndex";
 
-const author = () => {
+const Author = () => {
     const followerArray = [
         {
             background: images.creatorbackground1,
@@ -63,17 +63,16 @@ const author = () => {
             />
             <Title
                 heading="Popular Creators"
-                paragraph="Click on music icon and enjoy NTF music or audio
-"
+                paragraph="Click on music icon and enjoy NTF music or audio"
             />
             <div className={Style.author_box}>
                 {followerArray.map((el, i) => (
-                    <FollowerTabCard i={i} el={el} />
+                    <FollowerTabCard key={i} el={el} />
                 ))}
             </div>
             <Brand />
         </div>
-    )
-}
+    );
+};
 
-export default author
+export default Author;
