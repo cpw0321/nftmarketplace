@@ -70,8 +70,8 @@ const about = () => {
 
                 <div className={Style.about_box_founder}>
                     <div className={Style.about_box_founder_box}>
-                        {founderArray.map((el, i) => (
-                            <div className={Style.about_box_founder_box_img}>
+                        {founderArray.map((el, index) => (
+                            <div key={index} className={Style.about_box_founder_box_img}>
                                 <Image
                                     src={el.images}
                                     alt={el.name}
@@ -96,8 +96,8 @@ const about = () => {
 
                 <div className={Style.about_box_facts}>
                     <div className={Style.about_box_facts_box}>
-                        {factsArray.map((el, i) => (
-                            <div className={Style.about_box_facts_box_info}>
+                        {factsArray.map((el, index) => (
+                            <div key={index} className={Style.about_box_facts_box_info}>
                                 <h3>{el.title}</h3>
                                 <p>{el.info}</p>
                             </div>
